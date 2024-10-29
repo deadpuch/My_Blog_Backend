@@ -18,7 +18,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 router.post("/BlogCreated", verifyUser, doBlog);
-router.post("/addImage", verifyUser, upload.single("img"), imageController);
+router.post("/addImage",  upload.single("img"), imageController);
 router.get("/createdBlog", verifyUser, allBlog);
 
 
