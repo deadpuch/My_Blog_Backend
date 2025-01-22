@@ -15,7 +15,7 @@ connectDb();
 var app = express();
 
 app.use(cors({
-  origin: ["http://localhost:5173","https://my-blog-backend-0hnr.onrender.com","https://myblog-ajaye44.netlify.app/signin"],
+  origin: ["http://localhost:5173","https://my-blog-backend-0hnr.onrender.com","https://myblog-ajaye44.netlify.app"],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
 }));
