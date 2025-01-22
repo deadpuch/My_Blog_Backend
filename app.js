@@ -14,7 +14,11 @@ const cors = require("cors");
 connectDb();
 var app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:5173","https://my-blog-backend-0hnr.onrender.com"],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}));
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
